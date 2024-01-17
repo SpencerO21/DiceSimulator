@@ -26,8 +26,10 @@ internal class Program
         // Print the histogram
         for (int i = 2; i <= 12; i++)
         {
-            int percentage = results[i - 2] * 100 / numRolls;
-            System.Console.WriteLine($"{i}: {new string('*', percentage)}");
+            double percentage = (double)results[i - 2] * 100 / numRolls;
+            int percentageInt = (int)percentage;
+
+            System.Console.WriteLine($"{i}: {new string('*', percentageInt)}");
         }
     }
 }
